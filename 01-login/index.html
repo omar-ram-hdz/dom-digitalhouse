@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM | Login</title>
+    <link rel="shortcut icon" href="./key.svg" type="svg/x-icon" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <form id="login" novalidate>
+      <h1>Login</h1>
+      <div>
+        <label for="email">Email:</label>
+        <input
+          class="form-field"
+          type="email"
+          id="email"
+          name="email"
+          required
+          minlength="3"
+          maxlength="30"
+          autocomplete="off"
+        />
+        <span class="form-error" id="errorEmail"></span>
+      </div>
+
+      <div>
+        <label for="password">Password:</label>
+        <div class="password-field">
+          <input
+            class="form-field"
+            type="password"
+            id="password"
+            name="password"
+            required
+            minlength="3"
+            maxlength="30"
+            autocomplete="off"
+          />
+          <button
+            type="button"
+            class="eye"
+            data-input="password"
+            aria-label="mostrar u ocultar"
+          ></button>
+        </div>
+        <span class="form-error" id="errorPassword"></span>
+      </div>
+
+      <div>
+        <label for="confirmPassword">Confirm password:</label>
+        <div class="password-field">
+          <input
+            class="form-field"
+            type="password"
+            id="confirmPassword"
+            name="confirmPassword"
+            required
+            minlength="3"
+            maxlength="30"
+            autocomplete="off"
+          />
+          <button
+            type="button"
+            class="eye"
+            data-input="confirmPassword"
+            aria-label="mostrar u ocultar"
+          ></button>
+        </div>
+        <span class="form-error" id="errorConfirmPassword"></span>
+      </div>
+      <button type="submit">Login</button>
+    </form>
+    <script src="./script.js"></script>
+  </body>
+</html>
