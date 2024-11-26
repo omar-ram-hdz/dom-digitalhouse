@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./images/icon.ico" type="image/x-icon" />
+    <title>Clima</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <aside>
+      <h1>Clima</h1>
+      <search>
+        <form action="get">
+          <label>
+            <input class="in-search" id="search" type="search" name="q" autocomplete="off" placeholder="Ciudad"/>
+          </label>
+            <button type="submit">
+              <img
+                src="./images/svg-search.svg"
+                alt="Lupa"
+                width="50"
+                height="50"
+              />
+            </button>
+        </form>
+      </search>
+    </aside>
+    <main>
+      <h2 id="title">Ingresa el nombre de una ciudad para conocer su pronostico del clima</h1>
+      <div role="status" aria-live="polite" class="loader hidden">
+        <span class="visually-hidden">Cargando...</span>
+      </div>
+      <section class="weather-card hidden" id="weather-current">
+        <header>
+          <p><time id="weather-current-time" datetime=""></time></p>
+        </header>
+        <div>
+          <img id="weather-icon" src="" alt="">
+          <p id="weather-temperature"></p>
+        </div>
+        <p id="weather-description"></p>
+        <p id="weather-sensacion"></p>
+        <p id="weather-velocidad"></p>
+      </section>
+    </main>
+    <script src="./src/main.js" type="module" defer></script>
+  </body>
+</html>
+<!-- 
+  TODO: 
+  - Loading
+  - Personalized flags
+  - Get lat and lon
+  - 5 day weather
+
+-->
