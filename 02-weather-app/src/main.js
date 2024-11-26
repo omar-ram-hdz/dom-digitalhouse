@@ -41,6 +41,7 @@ const render = (data) => {
 $form.addEventListener("submit", (e) => {
   e.preventDefault();
   let city = $form.q.value;
+  toggleSection();
   toggleLoader();
   getCurrent(city)
     .then((res) => {
