@@ -9,7 +9,6 @@ import capitalize from "./utils/capitalize.js";
 const d = document,
   { log } = console;
 const toggleLoader = handleVisibility(".loader", "hidden");
-const toggleSection = handleVisibility("#weather-current", "hidden");
 const $title = d.getElementById("title");
 let currentData = {};
 const $form = d.querySelector("form");
@@ -35,22 +34,23 @@ const render = (data) => {
   $section.querySelector(
     "#weather-velocidad"
   ).innerText = `Velocidad del viento: ${data.wind.speed}`;
-  toggleSection();
+  $section.classList.remove("hidden");
 };
 
 $form.addEventListener("submit", (e) => {
   e.preventDefault();
   let city = $form.q.value;
-  toggleSection();
   toggleLoader();
   getCurrent(city)
     .then((res) => {
+      $section.classList.add("hidden");
+      log(res);
       currentData = res;
       if (res.status === 404) {
         $title.innerText = `La ciudad "${city}" no se encontró`;
-      } else {
-        render(res);
+        throw res;
       }
+      render(res);
     })
     .catch((err) => {
       log(err);
