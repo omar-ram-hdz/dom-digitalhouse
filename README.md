@@ -26,14 +26,35 @@ La certificación abarca los siguientes temas
 - Diseño UX/UI
 - React.js
 
-## Lista de proyectos
+# Lista de proyectos
 
-### Validación de Formulario
+## Validación de Formulario
 
-- Maquetación (HTML,CSS)
-- Validación
-
-### Inicio de sesión
+Maquetación y validación del formulario con JavaScript
 
 - Maquetación (HTML,CSS)
 - Validación (JavaScript)
+
+## Inicio de sesión
+
+Maquetación del formulario de inicio de sesión y validación con JavaScript
+
+- Maquetación (HTML,CSS)
+- Validación (JavaScript)
+- Opción de mostrar/ocultar contraseña
+
+## Weather App
+
+Para conseguir el pronostico del tiempo de una ciudad determinada
+
+- Maquetacion (HTML,CSS)
+- Peticiones a una API con JavaScript
+- Manejo de Axios library
+
+## Simple social network
+
+CRUD de un centro de mensajes usando localStorage
+
+- Maquetación (HTML,CSS)
+- Manejo del localStorage con JavaScript
+- Manejo de modal con JavaScript
