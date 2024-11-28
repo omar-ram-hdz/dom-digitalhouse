@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./images/msg.ico" type="image/x-icon" />
+    <title>Red social</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main>
+      <h1>Red social</h1>
+      <form id="thinking">
+        <h3>¿Que estas pensando?</h3>
+        <label for="title">Título:</label>
+        <input type="text" name="title" id="title" required minlength="4" />
+        <label for="comment">Comentario:</label>
+        <textarea name="content" id="content" required></textarea>
+        <button type="submit">Comentar</button>
+      </form>
+      <template id="template-publication">
+        <article class="art-publication">
+          <header>
+            <p><strong class="publication-title"></strong></p>
+            <menu>
+              <button
+                class="publication-btn publication-edit"
+                aria-label="edit publication"
+              ></button>
+              <button
+                class="publication-btn publication-delete"
+                aria-label="delete publication"
+              ></button>
+            </menu>
+          </header>
+          <p class="publication-content"></p>
+          <footer>
+            <button class="publication-btn publication-reaction"></button>
+          </footer>
+        </article>
+      </template>
+    </main>
+    <dialog class="dialog-edit">
+      <form class="form-edit" data-id="">
+        <button
+          type="button"
+          class="dialog-close publication-btn"
+          aria-label="close dialog"
+        ></button>
+        <h3>Editar publicación</h3>
+        <label for="title">Título:</label>
+        <input type="text" name="title" id="title" required minlength="4" />
+        <label for="comment">Comentario:</label>
+        <textarea name="content" id="content" required></textarea>
+        <button type="submit">Terminar</button>
+      </form>
+    </dialog>
+    <script src="./script.js"></script>
+  </body>
+</html>

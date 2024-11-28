@@ -1,0 +1,165 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  --bg-gray: #f2f4f7;
+  --blue: #2c64f6;
+  font-family: inherit;
+  border: none;
+  outline: none;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  font-family: "Roboto", serif;
+  background-color: var(--bg-gray);
+  overflow-x: hidden;
+}
+button {
+  cursor: pointer;
+}
+li {
+  list-style: none;
+  display: inline;
+}
+main {
+  max-width: 700px;
+  margin: auto;
+  padding-top: 20px;
+}
+h1 {
+  color: var(--blue);
+  text-align: center;
+  margin-bottom: 10px;
+}
+#thinking {
+  width: 100%;
+  margin: auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #ccc;
+}
+textarea,
+input {
+  display: block;
+  width: 80%;
+  padding: 2ch;
+  border: 2px solid #cecece;
+  border-radius: 8px;
+  transition: border-color 100ms ease-in-out;
+}
+input {
+  height: 4ch;
+}
+textarea {
+  resize: none;
+  height: 20ch;
+}
+input:focus,
+textarea:focus,
+input:active,
+textarea:active {
+  border-color: var(--blue);
+}
+[type="submit"] {
+  font-size: 1em;
+  display: block;
+  padding: 15px 50px;
+  margin: 15px auto;
+  border-radius: 40px;
+  color: white;
+  background-color: var(--blue);
+  transition: opacity 200ms ease-out;
+}
+[type="submit"]:hover {
+  opacity: 0.9;
+}
+.art-publication {
+  width: 100%;
+  margin: 10px 0px;
+  padding: 25px;
+  background-color: white;
+}
+.art-publication header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2ch;
+}
+.art-publication footer {
+  margin-top: 10px;
+}
+.publication-btn {
+  width: 35px;
+  height: 35px;
+  background-color: transparent;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.publication-btn img {
+  object-fit: cover;
+}
+.publication-edit {
+  background-image: url("./images/svg-edit.svg");
+}
+.publication-delete {
+  background-image: url("./images/svg-delete.svg");
+}
+.publication-title {
+  font-size: 1.5em;
+}
+.publication-reaction {
+  background-image: url("./images/svg-heart.svg");
+  transition: background-image 0.3s ease-in-out, transform 0.32s ease;
+}
+.liked {
+  background-image: url("./images/svg-heart-fill.svg");
+  transform: rotateY(180deg);
+}
+.dialog-edit {
+  width: 90%;
+  max-width: 700px;
+  padding: 1rem 2rem;
+  position: fixed;
+  transform: translateX(-100%);
+  margin: auto;
+  background-color: transparent;
+  transition: transform 200ms ease-in;
+}
+.dialog-edit.open {
+  transform: translateX(0);
+  inset: 0;
+}
+.dialog-edit::backdrop {
+  background-color: #22222290;
+}
+.form-edit {
+  position: relative;
+  width: 100%;
+  padding: 20px;
+  background-color: var(--bg-gray);
+}
+.form-edit input,
+.form-edit textarea {
+  width: 100%;
+}
+.dialog-close {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background-image: url("./images/svg-close.svg");
+}
+
+@media (max-width: 730px) {
+  main {
+    padding: 20px 5%;
+  }
+  input,
+  textarea {
+    width: 100%;
+  }
+}
