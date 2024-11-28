@@ -40,7 +40,7 @@ Maquetación y validación del formulario con JavaScript
 - Maquetación (HTML,CSS)
 - Validación (JavaScript)
 
-![Screenshot validación de formulario]("./tree/main/screenshots/00-validation-form.png")
+![Screenshot validación de formulario](./screenshots/00-validation-form.png)
 
 ## Inicio de sesión
 
@@ -50,7 +50,7 @@ Maquetación del formulario de inicio de sesión y validación con JavaScript
 - Validación (JavaScript)
 - Opción de mostrar/ocultar contraseña
 
-![Screenshot formulario de inicio de sesión]("./tree/main/screenshots/01-validation-form.png")
+![Screenshot formulario de inicio de sesión](./screenshots/01-login-form.png)
 
 ## Weather App
 
@@ -60,7 +60,7 @@ Para conseguir el pronostico del tiempo de una ciudad determinada
 - Peticiones a una API con JavaScript
 - Manejo de Axios library
 
-![Screenshot weather app]("./tree/main/screenshots/02-weather-app.png")
+![Screenshot weather app](./screenshots/02-weather-app.png)
 
 ## Simple social network
 
@@ -70,4 +70,4 @@ CRUD de un centro de mensajes usando localStorage
 - Manejo del localStorage con JavaScript
 - Manejo de modal con JavaScript
 
-![Screenshot red social simple]("./tree/main/screenshots/03-simple-ss.png")
+![Screenshot red social simple](./screenshots/03-simple-ss.png)
